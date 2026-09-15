@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="35%" stop-color="#c9a86b"/>
+      <stop offset="70%" stop-color="#997b3e"/>
+      <stop offset="100%" stop-color="#eab308"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Medallion -->
+  <circle cx="50" cy="50" r="48" fill="url(#bgGrad)" stroke="#27272a" stroke-width="1.5"/>
+  
+  <!-- Outer Filigree Ring -->
+  <circle cx="50" cy="50" r="44" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" stroke-dasharray="3,1.5" opacity="0.8"/>
+  <circle cx="50" cy="50" r="41" fill="none" stroke="url(#goldGrad)" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- Compass Cardinal Accent Dots -->
+  <circle cx="50" cy="9" r="1.5" fill="url(#goldGrad)"/>
+  <circle cx="50" cy="91" r="1.5" fill="url(#goldGrad)"/>
+  <circle cx="9" cy="50" r="1.5" fill="url(#goldGrad)"/>
+  <circle cx="91" cy="50" r="1.5" fill="url(#goldGrad)"/>
+
+  <!-- Center Monogram 'ED' -->
+  <text 
+    x="50" 
+    y="61" 
+    text-anchor="middle" 
+    font-family="'Cinzel', 'Playfair Display', Georgia, serif" 
+    font-size="36" 
+    font-weight="700" 
+    letter-spacing="0.04em" 
+    fill="url(#goldGrad)" 
+    filter="url(#goldGlow)"
+  >ED</text>
+  
+  <!-- Subtle Needle Line Under Accent -->
+  <path d="M 32 69 L 68 69" stroke="url(#goldGrad)" stroke-width="1" opacity="0.65" stroke-linecap="round"/>
+  <circle cx="50" cy="69" r="1.2" fill="url(#goldGrad)"/>
+</svg>
